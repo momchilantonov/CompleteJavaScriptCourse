@@ -86,3 +86,34 @@ console.log(getWinner(avgScoreDolphins1, avgScoreKoalas1));
 console.log(getWinner(avgScoreDolphins2, avgScoreKoalas2));
 // Test3
 console.log(getWinner(avgScoreDolphins3, avgScoreKoalas3));
+
+//////////Coding Challenge #4//////////
+// Task1
+function getTipVal(billVal) {
+    const tipPrcnt = billVal >= 50 && billVal <= 300 ? 0.15 : 0.2; 
+
+    return tipPrcnt;
+}   
+
+// Test1
+console.log(getTipVal(275));
+// Test2
+console.log(getTipVal(40));
+// Test3
+console.log(getTipVal(430));
+
+// Task2
+function getTotalVal(billVal) {
+    const tipPrcnt = getTipVal(billVal);
+    const tipVal = billVal * tipPrcnt;
+    const totalVal = billVal + tipVal;
+    
+    return `The bill was ${billVal.toFixed(2)}, the tip was ${tipVal.toFixed(2)}, and the total value ${totalVal.toFixed(2)}`
+}
+
+// Test1
+console.log(getTotalVal(275));
+// Test2
+console.log(getTotalVal(40));
+// Test3
+console.log(getTotalVal(430));
