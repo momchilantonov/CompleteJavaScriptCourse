@@ -1,5 +1,5 @@
 //////////Coding Challenge #1//////////
-// Test data 1
+// Test1
 const weightMark1 = 78;
 const weightJohn1 = 92;
 const heightMark1 = 1.69;
@@ -12,7 +12,7 @@ const markHigherBMI1 = bmiMark1 > bmiJohn1;
 
 console.log(markHigherBMI1);
 
-// Test data 2
+// Test2
 const weightMark2 = 95;
 const weightJohn2 = 85;
 const heightMark2 = 1.88;
@@ -31,3 +31,58 @@ if (markHigherBMI1) {
 } else {
     console.log(`John's BMI (${bmiJohn1}) is higher than Mark's (${bmiMark1})!`)
 }
+
+//////////Coding Challenge #3//////////
+// Task1
+function getAvgScore(scores) {
+    let scoresSum = 0;
+
+    for (let score of scores) {
+        scoresSum += score;
+    }
+
+    const result = scoresSum / scores.length;
+
+    return result.toFixed(2);
+}
+
+const avgScoreDolphins1 = getAvgScore([96, 108, 89]);
+const avgScoreKoalas1 = getAvgScore([88, 91, 110]);
+const avgScoreDolphins2 = getAvgScore([97, 112, 101]);
+const avgScoreKoalas2 = getAvgScore([109, 95, 123]);
+const avgScoreDolphins3 = getAvgScore([97, 112, 101]);
+const avgScoreKoalas3 = getAvgScore([109, 95, 106]);
+
+// Test1
+console.log(avgScoreDolphins1);
+console.log(avgScoreKoalas1);
+// Test2
+console.log(avgScoreDolphins2);
+console.log(avgScoreKoalas2);
+// Test3
+console.log(avgScoreDolphins3);
+console.log(avgScoreKoalas3);
+
+// Task2 & Task3 & Task4
+function getWinner(avgScoreTeam1, avgScoreTeam2) {
+    const minimumScore = 100;
+    const isDolphinsWin = avgScoreTeam1 > avgScoreTeam2 && avgScoreTeam1 >= minimumScore;
+    const isKoalasWin = avgScoreTeam2 > avgScoreTeam1 && avgScoreTeam2 >= minimumScore;
+    const isDraw = avgScoreTeam1 == avgScoreTeam2 && avgScoreTeam1 >= minimumScore;
+
+    if (isDolphinsWin) {
+        return "The winner is Dolphins with average score " + avgScoreTeam1;
+    } else if (isKoalasWin) {
+        return "The winner is Koalas with average score " + avgScoreTeam2;
+    } else if (isDraw) {
+        return "The match is draw with average score " + avgScoreTeam1;
+    } else {
+        return "Average score under 100 points"
+    }
+}
+// Test1
+console.log(getWinner(avgScoreDolphins1, avgScoreKoalas1));
+// Test2
+console.log(getWinner(avgScoreDolphins2, avgScoreKoalas2));
+// Test3
+console.log(getWinner(avgScoreDolphins3, avgScoreKoalas3));
