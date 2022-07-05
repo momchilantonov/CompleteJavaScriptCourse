@@ -37,3 +37,14 @@ const russiaPopulationPrcnt2 = percentageOfWorld2(50);
 console.log(bulgariaPopulationPrcnt2);
 console.log(italyPopulationPrcnt2);
 console.log(russiaPopulationPrcnt2);
+
+//////////Arrow Functions//////////
+const percentageOfWorld3 = population => (population / 7900) * 100;
+
+const bulgariaPopulationPrcnt3 = percentageOfWorld3(6);
+const italyPopulationPrcnt3 = percentageOfWorld3(15);
+const russiaPopulationPrcnt3 = percentageOfWorld3(50);
+
+console.log(bulgariaPopulationPrcnt3);
+console.log(italyPopulationPrcnt3);
+console.log(russiaPopulationPrcnt3);
