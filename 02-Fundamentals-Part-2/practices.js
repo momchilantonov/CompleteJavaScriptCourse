@@ -48,3 +48,17 @@ const russiaPopulationPrcnt3 = percentageOfWorld3(50);
 console.log(bulgariaPopulationPrcnt3);
 console.log(italyPopulationPrcnt3);
 console.log(russiaPopulationPrcnt3);
+
+//////////Functions Calling Other Functions//////////
+function describePopulation (country, population) {
+    const populationPrcnt = percentageOfWorld1(population)
+    return `${country} has ${population} million people, which is about ${populationPrcnt.toFixed(2)}% of the world.`
+}
+
+const bulgariaPopulationDescribe = describePopulation("Bulgaria", 6);
+const italyPopulationDescribe = describePopulation("Italy" ,15);
+const russiaPopulationDescribe = describePopulation("China" ,1441);
+
+console.log(bulgariaPopulationDescribe);
+console.log(italyPopulationDescribe);
+console.log(russiaPopulationDescribe);
