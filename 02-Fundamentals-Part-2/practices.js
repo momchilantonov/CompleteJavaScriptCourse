@@ -50,14 +50,14 @@ console.log(italyPopulationPrcnt3);
 console.log(russiaPopulationPrcnt3);
 
 //////////Functions Calling Other Functions//////////
-function describePopulation (country, population) {
+function describePopulation(country, population) {
     const populationPrcnt = percentageOfWorld1(population)
     return `${country} has ${population} million people, which is about ${populationPrcnt.toFixed(2)}% of the world.`
 }
 
 const bulgariaPopulationDescribe = describePopulation("Bulgaria", 6);
-const italyPopulationDescribe = describePopulation("Italy" ,15);
-const russiaPopulationDescribe = describePopulation("China" ,1441);
+const italyPopulationDescribe = describePopulation("Italy", 15);
+const russiaPopulationDescribe = describePopulation("China", 1441);
 
 console.log(bulgariaPopulationDescribe);
 console.log(italyPopulationDescribe);
@@ -97,7 +97,6 @@ neighbours[neighbours.indexOf("Serbia")] = "Republic of Serbia";
 console.log(neighbours);
 
 //////////Introduction to Objects//////////
-
 const myCountry = {
     country: "Bulgaria",
     capital: "Sofia",
@@ -105,3 +104,7 @@ const myCountry = {
     population: 6,
     neighbours: ["North Macedonia", "Serbia", "Turkey", "Greece", "Romania"]
 };
+
+//////////Dot vs. Bracket Notation//////////
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people,
+${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`)
