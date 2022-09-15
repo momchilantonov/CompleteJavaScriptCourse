@@ -62,3 +62,36 @@ const russiaPopulationDescribe = describePopulation("China" ,1441);
 console.log(bulgariaPopulationDescribe);
 console.log(italyPopulationDescribe);
 console.log(russiaPopulationDescribe);
+
+//////////Introduction to Arrays//////////
+const population = [6, 15, 137, 1441];
+
+console.log(population.length === 4);
+
+const percentages = [
+    percentageOfWorld1(population[0]),
+    percentageOfWorld1(population[1]),
+    percentageOfWorld1(population[2]),
+    percentageOfWorld1(population[3]),
+]
+
+console.log(percentages)
+
+//////////Basic Array Operations (Methods) //////////
+const neighbours = ["Greece", "Turkey", "Serbia"];
+
+neighbours.push("Utopia");
+
+console.log(neighbours);
+
+neighbours.pop();
+
+console.log(neighbours);
+
+if (!neighbours.includes("Germani")) {
+    console.log("Probably not a central European country :D");
+}
+
+neighbours[neighbours.indexOf("Serbia")] = "Republic of Serbia";
+
+console.log(neighbours);
