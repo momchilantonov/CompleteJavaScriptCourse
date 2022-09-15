@@ -95,3 +95,11 @@ if (!neighbours.includes("Germani")) {
 neighbours[neighbours.indexOf("Serbia")] = "Republic of Serbia";
 
 console.log(neighbours);
+
+const myCountry = {
+    "country": "Bulgaria",
+    "capital": "Sofia",
+    "language": "bulgarian",
+    "population": 6,
+    "neighbours": ["North Macedonia", "Serbia", "Turkey", "Greece", "Romania"]
+};
