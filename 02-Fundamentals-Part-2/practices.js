@@ -77,7 +77,7 @@ const percentages = [
 
 console.log(percentages)
 
-//////////Basic Array Operations (Methods) //////////
+//////////Basic Array Operations (Methods)//////////
 const neighbours = ["Greece", "Turkey", "Serbia"];
 
 neighbours.push("Utopia");
@@ -96,10 +96,12 @@ neighbours[neighbours.indexOf("Serbia")] = "Republic of Serbia";
 
 console.log(neighbours);
 
+//////////Introduction to Objects//////////
+
 const myCountry = {
-    "country": "Bulgaria",
-    "capital": "Sofia",
-    "language": "bulgarian",
-    "population": 6,
-    "neighbours": ["North Macedonia", "Serbia", "Turkey", "Greece", "Romania"]
+    country: "Bulgaria",
+    capital: "Sofia",
+    language: "bulgarian",
+    population: 6,
+    neighbours: ["North Macedonia", "Serbia", "Turkey", "Greece", "Romania"]
 };
