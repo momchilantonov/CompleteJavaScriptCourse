@@ -127,3 +127,12 @@ const votersNumber = 50;
 for (let i = 1; i <= votersNumber; i++) {
     console.log(`Voter number ${i} is currently voting`);
 }
+
+//////////Looping Arrays, Breaking and Continuing//////////
+const percentages2 = [];
+
+for (let i = 0; i < population.length; i++) {
+    percentages2.push(percentageOfWorld1(population[i]))
+}
+
+console.log(percentages, percentages2)
