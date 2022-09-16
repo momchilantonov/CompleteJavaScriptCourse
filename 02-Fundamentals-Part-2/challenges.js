@@ -93,3 +93,38 @@ const johnBMI = {
 console.log(
     `${markBMI.calcBMI() < johnBMI.calcBMI() ? `Mark's BMI (${markBMI.bmi.toFixed(2)}) is higher than John's (${jhonBMI.bmi.toFixed(2)})!`: `John's BMI (${johnBMI.bmi.toFixed(2)}) is higher than Mark's (${markBMI.bmi.toFixed(2)})!`}`
 )
+
+//////////Coding Challenge #4//////////
+// Task1
+const bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+// Task2
+const tips2 = [];
+const totals2 = [];
+
+// Task3
+for (let i = 0; i < bills2.length; i++) {
+    const tip = calcTip(bills2[i]);
+    const total = bills2[i] + tip;
+
+    tips2.push(tip);
+    totals2.push(total);
+}
+
+console.log(`tips -> ${tips2}`);
+console.log(`totals -> ${totals2}`);
+
+// Task4
+function calcAverage2(arr) {
+    let sum = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    const average = sum / arr.length;
+
+    return average;
+}
+
+console.log(calcAverage2(totals2));
